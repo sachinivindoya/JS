@@ -6,11 +6,82 @@
 </head>
 <body>
 
+<!-- console eke idn dynamically web page eka change karana kramaya thama DOM manipulation kiyanne -->
+<!-- web page eke thina elements select karaganna krama 6k thinawa.
+
+01) getElementsByTagName
+============================
+
+api karanna one web page eka right click karala inspect gihin console tab eket gihin eke "no message" kiyana eke 'doc' kiyala type karala enter karala ayeth
+'document.getElementsByTagName("Tag eke nama")' dala enter karama apita enawa array list ekak result widiyt kochchr element e tag eken thinwd kiyala.
+ex: document.getElementByTagName("p")
+result ek widiyt
+HTMLCollection(2) [p, p]
+
+02) getElementById
+==================
+
+document.getElementById("myp");
+
+mekedi e id ekata adala mulu code ekama return karanwa
+
+
+03) getElementsByClassName
+===========================
+
+document.getElementsByClassName("myh2");
+
+04) getElementsByName
+=========================
+
+document.getElementsByName("username");
+
+05) querySelector
+==================
+
+document.querySelector("#myh2");
+document.querySelector("my text");
+document.querySelector(".myText");
+
+mekedi select karanne e dena element eken hambena palaweni code ek withrai.
+ekama element eken kipayak thibbath mulma eka witharai select karanne.
+
+06)  querySelectorAll
+=========================
+
+document.querySelectorAll("h2");
+
+mekedi e dena element eken inn okkoma select karanwa.
+
+
+dan balamu select karagatta element eka change karanne komd kiyala
+------------------------------------------------------------------
+
+element ekakin list ekak eddi adala index element ek allagnna api index ek yodagannwa
+
+ex: document.getElementByTagName("p")
+result ek widiyt
+HTMLCollection(2) [p, p]
+
+
+  document eke deweni <p> tag ek select karagann one nm
+
+  document.getElementsByTageName("p")[1];
+
+  document.getElementsByTagName("p")[1].innerText="Hello";
+
+ ethakot api code eken deweni p ekata dunna tika wenuwt web page ek dynamically mek dunnama
+  deweni p ekata me dala thina hello ek apply karanwa
+
+  document.getElementsByName("username")[0].setAttribute("placeholder","UserName");
+
+-->
+
 <h1> Hello IJSE </h1>
 <h2> Html Module </h2>
-<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto consectetur cumque dignissimos dolor earum odit quidem totam. A architecto consequatur eum fugit illo nostrum, nulla odio porro praesentium voluptates.</p>
+<p id="myp"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto consectetur cumque dignissimos dolor earum odit quidem totam. A architecto consequatur eum fugit illo nostrum, nulla odio porro praesentium voluptates.</p>
 
-<h2> JS </h2>
+<h2 class="myh2"> JS </h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi consequuntur dolorem error expedita facilis fuga ipsam iste iusto maxime minima nulla odio odit qui quia repellat repellendus, rerum vitae!</p>
 <ul>
     <li> Java </li>
@@ -19,5 +90,10 @@
     <li> c++ </li>
 </ul>
 
+<form action="">
+    <input type="text" name="username"><br>
+    <input type="text" name="password"><br>
+    <input type="button" name="click me" value="Click me">
+</form>
 </body>
 </html>
